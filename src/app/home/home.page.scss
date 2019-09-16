@@ -9,5 +9,10 @@ ion-card {
 	color: white;
 	font-size: 10vh;
 	text-align: center;
-	vertical-align: bottom ;
+	vertical-align: middle;
+	padding-top: 7.5vh; //padding-top = (height - font-size)/2
+}
+
+ion-content {
+	--color: #989aa2 !important;
 }
