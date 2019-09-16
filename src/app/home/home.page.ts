@@ -14,6 +14,7 @@ export class HomePage {
 	constructor(public modalCtrl: ModalController) {}
 
 	async onSelect(card) {
+		console.log(card);
 		const modal = await this.modalCtrl.create({
 			component: SelectedCardPage,
 			componentProps: { value: card }
