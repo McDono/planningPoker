@@ -16,7 +16,7 @@ export class SelectedCardPage implements OnInit {
   }
 
 	ionViewDidLoad() {
-		this.value = this.navParams.get('value');
+		 this.value = this.navParams.get('value');
 	}
 
 	dismiss() {

@@ -11,17 +11,13 @@ export class HomePage {
 
 	cards = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
 
-	onSelected(card){
-		console.log(card);
-	}
-
-  constructor(public modalCtrl: ModalController) {}
+	constructor(public modalCtrl: ModalController) {}
 
 	async onSelect(card) {
 		const modal = await this.modalCtrl.create({
 			component: SelectedCardPage,
 			componentProps: { value: card }
-		})
+		});
 		return await modal.present();
 	}
 
