@@ -6,6 +6,7 @@
 
 <ion-content padding>
 	<ion-card (click)="dismiss()">
-		{{ value }}
-	</ion-card>
+		<span *ngIf="card.img==null">{{card.id}}</span>
+		<ion-img *ngIf="card.img!=null" [src]="'assets/'+card.img"></ion-img>
+</ion-card>
 </ion-content>

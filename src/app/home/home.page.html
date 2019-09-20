@@ -14,7 +14,8 @@
 			<ion-row>
 				<ion-col size="6" *ngFor="let card of cards"> <!-- for loop -->
 					<ion-card (click)="onSelect(card)">
-						{{card}}
+						<span *ngIf="card.img==null"> {{card.id}}</span>
+						<ion-img *ngIf="card.img!=null" [src]="'assets/img/dogs/'+card.img"></ion-img>
 					</ion-card>
 				</ion-col>
 			</ion-row>

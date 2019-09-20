@@ -21,6 +21,6 @@ export class ListPage implements OnInit {
 
 	onSelect(item) {
 		console.log(item);
-		this.cardService.selection = item;
+		this.cardService.setSelection(item);
 	}
 }
