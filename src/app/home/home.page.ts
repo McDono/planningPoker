@@ -14,8 +14,8 @@ export class HomePage {
 	cards = [];
 
 	constructor(public modalCtrl: ModalController,
-							private cardService: CardService,
-							private storage: Storage) {}
+              private cardService: CardService,
+              private storage: Storage) {}
 
 	ngAfterViewInit() {
 		this.storage.get('deckType').then((val) => {
