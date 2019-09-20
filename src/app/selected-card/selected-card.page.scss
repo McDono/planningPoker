@@ -2,7 +2,8 @@ ion-card {
   height: 80%;
   background-color: #3880ff;
   color: white;
-  font-size: 15vh;
+  font-size: 25vh;
   text-align: center;
   vertical-align: middle !important;
+	padding-top: 35%; //padding-top = (height - font-size)/2
 }
