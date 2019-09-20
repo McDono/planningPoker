@@ -4,7 +4,17 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CardService {
-	cards = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
+	sizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
+	fibSeq = ['1', '2', '3', '5', '8', '13', '21'];
+	selection = 'sizes'; //default selection
+	options = ['sizes', 'fibSeq']
 
   constructor() { }
+
+	cardValues() {
+		if (this.selection == 'sizes')
+			return this.sizes;
+		else
+			return this.fibSeq;
+	}
 }

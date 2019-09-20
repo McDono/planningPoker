@@ -10,7 +10,7 @@ import { CardService } from '../services/card.service';
 })
 export class HomePage {
 
-	cards = this.cardsService.cards;
+	cards = this.cardsService.cardValues();
 
 	constructor(public modalCtrl: ModalController,
 							private cardsService: CardService) {}
