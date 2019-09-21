@@ -17,7 +17,7 @@ export class HomePage {
               private cardService: CardService,
               private storage: Storage) {}
 
-	ngAfterViewInit() {
+	ionViewWillEnter() {
 		this.storage.get('deckType').then((val) => {
 			console.log(val);
 			if(val)
