@@ -8,7 +8,7 @@ import { CardService } from '../services/card.service';
 })
 export class ListPage implements OnInit {
   items = this.cardService.options;
-
+	path = "/home";
   constructor(private cardService: CardService) {
   }
 
@@ -22,5 +22,9 @@ export class ListPage implements OnInit {
 	onSelect(item) {
 		console.log(item);
 		this.cardService.setSelection(item);
+	}
+
+	selectRouter() {
+		return "/home";
 	}
 }
