@@ -13,18 +13,18 @@ export class ListPage implements OnInit {
   }
 
   ngOnInit() {
-		var checkbox = document.getElementsByTagName("ion-checkbox")[0];
-		var path = "";
-		checkbox.addEventListener("ionChange", (e) => {
-			if (e.target.checked === true)
-				path = "/home";
-			else
-				path = "/list";
-			var list = document.getElementById("list");
-			//list.removeAttribute("routerLink");
-			list.setAttribute("routerLink", path);
-			console.log(list.getAttribute("routerLink"));
-		});
+		// var checkbox = document.getElementsByTagName("ion-checkbox")[0];
+		// var path = "";
+		// checkbox.addEventListener("ionChange", (e) => {
+		// 	if (e.target.checked === true)
+		// 		path = "/home";
+		// 	else
+		// 		path = "/list";
+		// 	var list = document.getElementById("list");
+		// 	//list.removeAttribute("routerLink");
+		// 	list.setAttribute("routerLink", path);
+		// 	console.log(list.getAttribute("routerLink"));
+		// });
   }
   // add back when alpha.4 is out
   // navigate(item) {
