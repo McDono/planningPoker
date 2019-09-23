@@ -8,11 +8,23 @@ import { CardService } from '../services/card.service';
 })
 export class ListPage implements OnInit {
   items = this.cardService.options;
-	path = "/home";
+	//path = "/home";
   constructor(private cardService: CardService) {
   }
 
   ngOnInit() {
+		var checkbox = document.getElementsByTagName("ion-checkbox")[0];
+		var path = "";
+		checkbox.addEventListener("ionChange", (e) => {
+			if (e.target.checked === true)
+				path = "/home";
+			else
+				path = "/list";
+			var list = document.getElementById("list");
+			//list.removeAttribute("routerLink");
+			list.setAttribute("routerLink", path);
+			console.log(list.getAttribute("routerLink"));
+		});
   }
   // add back when alpha.4 is out
   // navigate(item) {
@@ -20,11 +32,25 @@ export class ListPage implements OnInit {
   // }
 
 	onSelect(item) {
-		console.log(item);
+		//console.log(item);
 		this.cardService.setSelection(item);
 	}
 
-	selectRouter() {
-		return "/home";
+	// selectRouter() {
+	// 	return "/home";
+	// }
+
+	checkboxClicked() {
+		// var checkbox = document.getElementsByTagName("ion-checkbox")[0];
+		// var list = document.getElementById("list");
+		// console.log(list);
+		// var path = "";
+		// if (checkbox.getAttribute("checked") === true)
+		// 	path = "/home";
+		// else
+		// 	path = "/list";
+		// console.log(path);
+		// list.setAttribute("routerLink", path);
+		// console.log(list.getAttribute("routerLink"));
 	}
 }
