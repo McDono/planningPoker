@@ -3,9 +3,14 @@
   overflow: hidden;
 }
 
+.toolbar-container {
+	--background: #461D7C !important;
+	background-color: #461D7C !important;
+}
+
 ion-card {
 	height: 25vh;
-	background-color: #3880ff;
+	background-color: #FDD023;
 	color: white;
 	font-size: 10vh;
 	text-align: center;
@@ -13,8 +18,13 @@ ion-card {
 	padding-top: 7.5vh; //padding-top = (height - font-size)/2
 }
 
+ion-header {
+	background-color: #461D7C !important;
+	color: #461D7C;
+}
+
 ion-content {
-	--color: #989aa2 !important;
+	--background: #461D7C !important;
 }
 
 ion-img {
