@@ -12,8 +12,9 @@ export class CardService {
 						{id:'21', img:null}];
 	dogs = [	{id:'1', img:'dog1.png'}, {id:'2', img:'dog2.png'}, {id:'3', img:'dog3.png'},
 						{id:'4', img:'dog4.png'}, {id:'5', img:'dog5.png'}];
-	selection = ''; //default selection
-	options = ['sizes', 'fibSeq', 'dogs'];
+	selection = 'fibSeq'; //default selection
+	optionsVariables = ['sizes', 'fibSeq', 'dogs'];
+	//optionsInterface = ['T-shirt sizes', 'Fibonacci Sequence', 'Dogs'];
 	deck = [];
 
   constructor(private storage: Storage) { }

@@ -7,12 +7,14 @@ import { CardService } from '../services/card.service';
   styleUrls: ['list.page.scss']
 })
 export class ListPage implements OnInit {
-  items = this.cardService.options;
-	//path = "/home";
+  items = this.cardService.optionsVariables;
+
+
   constructor(private cardService: CardService) {
   }
 
   ngOnInit() {
+		// console.log(this.items[0]);
 		// var checkbox = document.getElementsByTagName("ion-checkbox")[0];
 		// var path = "";
 		// checkbox.addEventListener("ionChange", (e) => {
