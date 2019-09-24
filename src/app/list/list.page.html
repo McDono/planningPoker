@@ -11,11 +11,12 @@
 
 <ion-content>
   <ion-list>
-    <ion-item id="list" routerLink="/home" *ngFor="let item of items"
+    <ion-item id="list" routerLink="/home" *ngFor="let item of itemsVariables"
 								(click)="onSelect(item)"
 								[ngClass]="{'selected': cardService.selection == item}">
       <ion-icon name="list-box" slot="start"></ion-icon>
-      {{item}}
+      <!-- {{itemsInterface[itemsVariables.indexOf(items)]}} -->
+			{{itemsInterface[itemsVariables.indexOf(item)]}}
     </ion-item>
   </ion-list>
 	<ion-item class="checkbox">

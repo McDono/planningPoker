@@ -7,8 +7,8 @@ import { CardService } from '../services/card.service';
   styleUrls: ['list.page.scss']
 })
 export class ListPage implements OnInit {
-  items = this.cardService.optionsVariables;
-
+  itemsVariables = this.cardService.optionsVariables;
+	itemsInterface = this.cardService.optionsInterface;
 
   constructor(private cardService: CardService) {
   }

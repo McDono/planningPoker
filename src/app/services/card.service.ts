@@ -14,7 +14,7 @@ export class CardService {
 						{id:'4', img:'dog4.png'}, {id:'5', img:'dog5.png'}];
 	selection = 'fibSeq'; //default selection
 	optionsVariables = ['sizes', 'fibSeq', 'dogs'];
-	//optionsInterface = ['T-shirt sizes', 'Fibonacci Sequence', 'Dogs'];
+	optionsInterface = ['T-shirt sizes', 'Fibonacci Sequence', 'Dogs'];
 	deck = [];
 
   constructor(private storage: Storage) { }
