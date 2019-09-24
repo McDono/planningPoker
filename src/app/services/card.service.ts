@@ -15,9 +15,21 @@ export class CardService {
 	selection = 'fibSeq'; //default selection
 	optionsVariables = ['sizes', 'fibSeq', 'dogs'];
 	optionsInterface = ['T-shirt sizes', 'Fibonacci Sequence', 'Dogs'];
+	iconNames = ["shirt", null, "list-box"];
+	iconSources = [null, "fibonacci-icon.svg", null];
+	public items: Array<{ title: string; note: string; iconName: any; iconSource: any }> = [];
 	deck = [];
 
-  constructor(private storage: Storage) { }
+  constructor(private storage: Storage) {
+		for (let i = 0; i < this.optionsVariables.length; i++) {
+      this.items.push({
+        title: this.optionsVariables[i],
+        note: this.optionsInterface[i],
+        iconName: this.iconNames[i],
+				iconSource: this.iconSources[i]
+      });
+		}
+	}
 
 	setSelection(selection) {
 		this.storage.set('deckType', selection);

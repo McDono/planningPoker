@@ -7,14 +7,16 @@ import { CardService } from '../services/card.service';
   styleUrls: ['list.page.scss']
 })
 export class ListPage implements OnInit {
-  itemsVariables = this.cardService.optionsVariables;
-	itemsInterface = this.cardService.optionsInterface;
+  // itemsVariables = this.cardService.optionsVariables;
+	// itemsInterface = this.cardService.optionsInterface;
+	// icons = this.cardService.icons;
+	items = this.cardService.items;
 
   constructor(private cardService: CardService) {
   }
 
   ngOnInit() {
-		// console.log(this.items[0]);
+		// console.log(this.icons[0]);
 		// var checkbox = document.getElementsByTagName("ion-checkbox")[0];
 		// var path = "";
 		// checkbox.addEventListener("ionChange", (e) => {
