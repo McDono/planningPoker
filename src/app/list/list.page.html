@@ -14,14 +14,13 @@
     <ion-item id="list" routerLink="/home" *ngFor="let item of items"
 								(click)="onSelect(item.title)"
 								[ngClass]="{'selected': cardService.selection == item.title}">
-      <!-- <ion-icon name=icons[itemsVariables.indexOf(item)] slot="start"></ion-icon> -->
 			<span *ngIf="item.iconName != null; else personalizedIcon">
       	<ion-icon [name]="item.iconName" slot="start"></ion-icon>
 			</span>
 			<ng-template #personalizedIcon>
 				<ion-icon [src]="'assets/'+item.iconSource" slot="start"></ion-icon>
 			</ng-template>
-			 <span style="margin: 0 auto">{{item.note}}</span>
+			 <span id="note" >{{item.note}}</span>
     </ion-item>
   </ion-list>
 	<ion-item class="checkbox">
