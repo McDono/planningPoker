@@ -15,7 +15,7 @@ export class CardService {
 	selection = 'fibSeq'; //default selection
 	optionsVariables = ['sizes', 'fibSeq', 'dogs'];
 	optionsInterface = ['T-shirt sizes', 'Fibonacci Sequence', 'Dogs'];
-	iconNames = ["shirt", null, "list-box"];
+	iconNames = ["shirt", "star", "list-box"];
 	iconSources = [null, "fibonacci-icon.svg", null];
 	public items: Array<{ title: string; note: string; iconName: any; iconSource: any }> = [];
 	deck = [];
