@@ -11,7 +11,7 @@
 
 <ion-content>
   <ion-list>
-    <ion-item id="list" routerLink="/home" *ngFor="let item of items"
+		<ion-item id="list" *ngFor="let item of items"
 								(click)="onSelect(item.title)"
 								[ngClass]="{'selected': cardService.selection == item.title}">
 			<div *ngIf="item.iconName != null; else personalizedIcon">
@@ -25,7 +25,7 @@
   </ion-list>
 	<ion-item class="checkbox">
 		<ion-label>Take me to home page when I choose a deck</ion-label>
-		<ion-checkbox color="primary" (click)="checkboxClicked()" checked="true" slot="start"></ion-checkbox>
+		<ion-checkbox color="primary" (click)="checkboxClicked($event)" checked="true" slot="start"></ion-checkbox>
 	</ion-item>
 	<!--
     <div *ngIf="selectedItem" padding>
